@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_model_1 = require('../hero/hero.model');
 var TitleComponent = (function () {
     function TitleComponent() {
         this.title = 'Tour of Heroes';
-        this.hero = new hero_model_1.Hero();
-        this.hero.name = 'Haytham';
     }
     TitleComponent.prototype.ngOnInit = function () { };
     TitleComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-title',
-            templateUrl: './title.component.html'
+            templateUrl: 'title.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], TitleComponent);

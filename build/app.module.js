@@ -10,15 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var core_2 = require("angular2-logger/core");
 var app_component_1 = require('./app.component');
 var title_component_1 = require('./title/title.component');
+var hero_module_1 = require("./hero/hero.module");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, hero_module_1.HeroModule],
             declarations: [app_component_1.AppComponent, title_component_1.TitleComponent],
+            providers: [core_2.Logger],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
