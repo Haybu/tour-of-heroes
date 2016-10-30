@@ -33,7 +33,8 @@ var HeroEditComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'hero-edit',
-            templateUrl: 'hero.edit.component.html'
+            templateUrl: 'hero.edit.component.html',
+            styleUrls: ['hero.detail.component.css']
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, heroes_service_1.HeroesService, common_1.Location])
     ], HeroEditComponent);

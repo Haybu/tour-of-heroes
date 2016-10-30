@@ -7,7 +7,8 @@ import { Location }    from '@angular/common';
 @Component({
     moduleId: module.id,
     selector: 'hero-edit',
-    templateUrl: 'hero.edit.component.html'
+    templateUrl: 'hero.edit.component.html',
+    styleUrls: [ 'hero.detail.component.css' ]
 })
 export class HeroEditComponent implements OnInit {
 

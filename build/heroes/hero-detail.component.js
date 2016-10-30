@@ -46,7 +46,8 @@ var HeroDetailComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'hero-detail',
-            templateUrl: 'hero-detail.component.html'
+            templateUrl: 'hero-detail.component.html',
+            styleUrls: ['hero.detail.component.css']
         }), 
         __metadata('design:paramtypes', [heroes_service_1.HeroesService, router_1.ActivatedRoute, router_1.Router, common_1.Location])
     ], HeroDetailComponent);
