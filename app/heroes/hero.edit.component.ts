@@ -30,4 +30,12 @@ export class HeroEditComponent implements OnInit {
         this.location.back();
     }
 
+    update(hero: Hero) {
+        this.heroesService.update(hero);
+    }
+
+    delete(hero: Hero) {
+        this.heroesService.delete(hero.id);
+    }
+
 }

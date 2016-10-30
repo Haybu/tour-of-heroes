@@ -3,4 +3,6 @@
     <div><label>id: </label>{{ selectedHero.id }}</div>
     <div><label>name: </label><input [(ngModel)]="selectedHero.name" placeholder="name"></div>
     <button (click)="goBack()">Back</button>
+    <button (click)="update(selectedHero)">Update</button>
+    <button (click)="delete(selectedHero)">Delete</button>
 </div>

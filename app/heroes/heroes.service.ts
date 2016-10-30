@@ -52,7 +52,7 @@ export class HeroesService {
 
     delete(id: number): Promise<void> {
         this._logger.warn('in delete(Hero) method...');
-        return this.http.delete(this.heroesUrl, {headers: this.headers})
+        return this.http.delete(this.heroesUrl+"/"+id)
             .toPromise()
             .then(res => res.json() as Hero)
             .catch(this.handleError);
