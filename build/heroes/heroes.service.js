@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var HeroService = (function () {
-    function HeroService() {
+var HeroesService = (function () {
+    function HeroesService() {
         this.heros = [
             { id: 11, name: 'Mr. Nice' },
             { id: 12, name: 'Narco' },
@@ -24,21 +24,21 @@ var HeroService = (function () {
             { id: 20, name: 'Tornado' }
         ];
     }
-    HeroService.prototype.add = function (hero) {
+    HeroesService.prototype.add = function (hero) {
         this.heros.push(hero);
     };
-    HeroService.prototype.getHero = function (id) {
-        this.heros.forEach(function (hero) {
-            if (hero.id == id)
-                return hero;
-        });
-        return null;
+    HeroesService.prototype.getHero = function (id) {
+        return this.getAllHeros()
+            .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
-    HeroService = __decorate([
+    HeroesService.prototype.getAllHeros = function () {
+        return Promise.resolve(this.heros);
+    };
+    HeroesService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    ], HeroesService);
+    return HeroesService;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.HeroesService = HeroesService;
+//# sourceMappingURL=heroes.service.js.map

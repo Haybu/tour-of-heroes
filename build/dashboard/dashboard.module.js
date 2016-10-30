@@ -9,22 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
 var core_2 = require("angular2-logger/core");
-var hero_component_1 = require("./hero.component");
-var forms_1 = require("@angular/forms");
-var HeroModule = (function () {
-    function HeroModule() {
+var dashboard_component_1 = require("./dashboard-component");
+var DashboardModule = (function () {
+    function DashboardModule() {
     }
-    HeroModule = __decorate([
+    DashboardModule = __decorate([
         core_1.NgModule({
-            imports: [forms_1.FormsModule],
-            declarations: [hero_component_1.HeroComponent],
-            exports: [hero_component_1.HeroComponent],
+            imports: [common_1.CommonModule],
+            declarations: [dashboard_component_1.DashboardComponent],
+            exports: [dashboard_component_1.DashboardComponent],
             providers: [core_2.Logger]
         }), 
         __metadata('design:paramtypes', [])
-    ], HeroModule);
-    return HeroModule;
+    ], DashboardModule);
+    return DashboardModule;
 }());
-exports.HeroModule = HeroModule;
-//# sourceMappingURL=hero.module.js.map
+exports.DashboardModule = DashboardModule;
+//# sourceMappingURL=dashboard.module.js.map

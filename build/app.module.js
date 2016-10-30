@@ -10,18 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var heroes_module_1 = require("./heroes/heroes.module");
+var dashboard_module_1 = require("./dashboard/dashboard.module");
+var app_routing_module_1 = require("./app.routing.module");
 var core_2 = require("angular2-logger/core");
 var app_component_1 = require('./app.component');
 var title_component_1 = require('./title/title.component');
-var hero_module_1 = require("./hero/hero.module");
+var heroes_service_1 = require("./heroes/heroes.service");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, hero_module_1.HeroModule],
+            imports: [
+                platform_browser_1.BrowserModule,
+                heroes_module_1.HeroesModule,
+                dashboard_module_1.DashboardModule,
+                app_routing_module_1.AppRoutingModule
+            ],
             declarations: [app_component_1.AppComponent, title_component_1.TitleComponent],
-            providers: [core_2.Logger],
+            providers: [core_2.Logger, heroes_service_1.HeroesService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

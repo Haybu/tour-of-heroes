@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Hero} from "./hero.model";
 
 @Injectable()
-export class HeroService {
+export class HeroesService {
 
      heros: Hero[] = [
         { id: 11, name: 'Mr. Nice' },
@@ -19,16 +19,17 @@ export class HeroService {
 
     constructor() { }
 
-    add (hero: Hero) {
+    public add (hero: Hero) {
         this.heros.push(hero);
     }
 
-    getHero(id: number) {
-        this.heros.forEach(hero => {
-            if (hero.id == id) return hero;
-        })
+    public getHero(id: number): Promise<Hero> {
+        return this.getAllHeros()
+            .then(heroes => heroes.find(hero => hero.id === id));
+    }
 
-        return null;
+    public getAllHeros(): Promise<Hero[]> {
+        return Promise.resolve(this.heros);
     }
 
 }
