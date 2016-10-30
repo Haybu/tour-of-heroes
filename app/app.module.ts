@@ -1,16 +1,15 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HeroesModule} from "./heroes/heroes.module";
-import {DashboardModule} from "./dashboard/dashboard.module";
-import {AppRoutingModule} from "./app.routing.module";
+import { HeroesModule } from "./heroes/heroes.module";
+import { DashboardModule } from "./dashboard/dashboard.module";
+import { AppRoutingModule } from "./app.routing.module";
+import { HttpModule, JsonpModule }    from '@angular/http';
 
 import { Logger } from "angular2-logger/core"; 
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
-import {HeroesService} from "./heroes/heroes.service";
-
-
+import { HeroesService } from "./heroes/heroes.service";
 
 
 @NgModule({
@@ -18,7 +17,9 @@ import {HeroesService} from "./heroes/heroes.service";
       BrowserModule,
       HeroesModule,
       DashboardModule,
-      AppRoutingModule
+      AppRoutingModule,
+      HttpModule,
+      JsonpModule
   ],
   declarations: [ AppComponent, TitleComponent ],
   providers: [ Logger, HeroesService ],

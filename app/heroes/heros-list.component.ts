@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Logger } from "angular2-logger/core";
 import {Router} from "@angular/router";
 
-import { Hero } from './/hero.model';
+import { Hero } from './hero.model';
 import {HeroesService} from "./heroes.service";
 
 @Component({
     moduleId: module.id,
     selector: 'heroes-list',
-    templateUrl: 'heroes-list.component.html'
+    templateUrl: 'heroes-list.component.html',
+    styleUrls: [ 'heroes-list.component.css' ]
 })
 export class HeroesListComponent implements OnInit {
 
@@ -17,7 +18,7 @@ export class HeroesListComponent implements OnInit {
     constructor(private _logger: Logger
         , private heroesService: HeroesService
         , private route: Router) {
-        this._logger.info('initializing a heroes object...');
+        this._logger.warn('in HeroesListComponent constructor...');
     }
 
     ngOnInit() {
